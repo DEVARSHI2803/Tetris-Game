@@ -38,7 +38,7 @@ Simple keyboard keys are taken into account to operate through the game.
 - 'A' or '<': Move tetromino left  
 - 'D' or '>': Move tetromino right  
 - 'W' or '^': Rotate tetromino  
-- 'S' or 'v': Drop tetromino faster  
+-  'v': Drop tetromino faster  
 - 'Space': Hard drop tetromino  
 - 'Q': Quit game  
 
@@ -78,7 +78,10 @@ Rules are as simple as it gets: arrange falling tetrominoes to form complete hor
 6) GameLoop()  
    Working: 
    - Runs the main game loop.  
-   - Handles tetromino falling speed based on level and input.  
+   - Handles tetromino falling speed based on level and input.
+ 7) IsValidMove()
+
+    Working:
    - Checks for game over when a new piece can’t spawn.  
 
 7) Main()  
@@ -103,14 +106,13 @@ Rules are as simple as it gets: arrange falling tetrominoes to form complete hor
 
 
 
-   ##Snippet:
+  
    
 
 ## Major Highlights
 
-- The user can influence the falling speed with soft drops (‘S’) and hard drops (‘Space’).  
+- The user can influence the falling speed with soft drops (‘^’) and hard drops (‘Space’).  
 - Game can be restarted infinitely many times based on user’s choice.  
-- Tetrominoes and grid use a cool color combination (red for active pieces, green for locked, blue boundaries).  
 - This code is Windows-specific.  
 
 ## Future Improvements
