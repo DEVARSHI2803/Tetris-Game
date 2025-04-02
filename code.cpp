@@ -226,7 +226,7 @@ void ResetGame() {
     currentRotation = 0;
     score = 0;
     level=1;
-    RotatePiece(currentRotation); 
+    RotatePiece(currentRotation);
 }
 void ShowInstructions() {
     ClearConsole();
@@ -249,14 +249,14 @@ void ShowInstructions() {
     cout << BLUE << "+---------------------------+" << RESET << endl;
 
     cout << CYAN << "Press any key to start..." << RESET << endl;
-    _getch(); // Wait for user input before starting
+    _getch(); 
 }
 int main() {
     srand((unsigned)time(0));
     HideCursor();
     ShowInstructions();
     while (true) {
-        ResetGame(); // Reset the game state
+        ResetGame();
         GameLoop();
         
         char choice;
