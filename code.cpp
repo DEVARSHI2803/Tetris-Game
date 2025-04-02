@@ -219,14 +219,14 @@ void GameLoop() {
     }
 }
 void ResetGame() {
-    memset(grid, 0, sizeof(grid)); // Clear the grid
+    memset(grid, 0, sizeof(grid));
     currentX = WIDTH / 2 - 2;
     currentY = 0;
     currentPiece = rand() % 7;
     currentRotation = 0;
     score = 0;
     level=1;
-    RotatePiece(currentRotation); // Initialize piece rotation
+    RotatePiece(currentRotation); 
 }
 void ShowInstructions() {
     ClearConsole();
