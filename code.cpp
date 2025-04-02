@@ -228,9 +228,33 @@ void ResetGame() {
     level=1;
     RotatePiece(currentRotation); // Initialize piece rotation
 }
+void ShowInstructions() {
+    ClearConsole();
+    cout << BLUE << "+---------------------------+" << RESET << endl;
+    cout << GREEN << "        TETRIS GAME        " << RESET << endl;
+    cout << BLUE << "+---------------------------+" << RESET << endl;
+    cout << YELLOW << "Controls:" << RESET << endl;
+    cout << "  " << GREEN << "[A] or Left Arrow  " << RESET << " - Move Left" << endl;
+    cout << "  " << GREEN << "[D] or Right Arrow " << RESET << " - Move Right" << endl;
+    cout << "  " << GREEN << "[S] or Down Arrow  " << RESET << " - Soft Drop" << endl;
+    cout << "  " << GREEN << "[W] or Up Arrow    " << RESET << " - Rotate" << endl;
+    cout << "  " << GREEN << "[Space]            " << RESET << " - Hard Drop" << endl;
+    cout << "  " << GREEN << "[Q]                " << RESET << " - Quit" << endl;
+
+    cout << BLUE << "+---------------------------+" << RESET << endl;
+    cout << "Goal: " << endl;
+    cout << "  - Stack and clear lines to score points!" << endl;
+    cout << "  - The game speeds up as you level up." << endl;
+    cout << "  - The game ends if blocks reach the top." << endl;
+    cout << BLUE << "+---------------------------+" << RESET << endl;
+
+    cout << CYAN << "Press any key to start..." << RESET << endl;
+    _getch(); // Wait for user input before starting
+}
 int main() {
     srand((unsigned)time(0));
     HideCursor();
+    ShowInstructions();
     while (true) {
         ResetGame(); // Reset the game state
         GameLoop();
